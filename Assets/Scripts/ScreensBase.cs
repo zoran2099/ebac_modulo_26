@@ -24,6 +24,17 @@ namespace Screens
         public float animationDuration = 0.5f;
         public float delayBetweenComponents = 0.5f;
 
+        public List<Typper> listOfPhrases;
+
+
+        public void StartTypper()
+        {
+            for (int i = 0; i < listOfPhrases.Count; i++)
+            {
+                listOfPhrases[i].StartType();
+            }
+        }
+
         private void Start()
         {
             if (startHided) ShowComponets(false);
@@ -35,6 +46,8 @@ namespace Screens
             Debug.Log("Show");
             //ShowComponets();
             ShowComponetsScaleAnimation();
+            Invoke(nameof(StartTypper), delayBetweenComponents * listOfComponents.Count);
+
         }
         
         [Button]
@@ -60,6 +73,8 @@ namespace Screens
                 t.DOScale(1,animationDuration).SetDelay(i++ * delayBetweenComponents);
             
             });
+
+            
         }
         private void HideComponetsScaleAnimation()
         {
@@ -78,4 +93,6 @@ namespace Screens
 
         }
     }
+
+   
 }

@@ -252,9 +252,11 @@ MonoBehaviour:
   - {fileID: 2110249647}
   - {fileID: 983862387}
   - {fileID: 1956640299}
-  startHided: 0
+  startHided: 1
   animationDuration: 0.5
   delayBetweenComponents: 0.1
+  listOfPhrases:
+  - {fileID: 1792953737}
 --- !u!1 &426621768
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,9 +540,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6204771066759659747, guid: d9f1eab8509cab84c8deac6f16b2db0c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1956640303}
-    - targetCorrespondingSourceObject: {fileID: 6204771066759659747, guid: d9f1eab8509cab84c8deac6f16b2db0c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1956640307}
   m_SourcePrefab: {fileID: 100100000, guid: d9f1eab8509cab84c8deac6f16b2db0c, type: 3}
 --- !u!224 &983862387 stripped
 RectTransform:
@@ -649,6 +648,7 @@ GameObject:
   - component: {fileID: 1792953734}
   - component: {fileID: 1792953736}
   - component: {fileID: 1792953735}
+  - component: {fileID: 1792953737}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -772,6 +772,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792953733}
   m_CullTransparentMesh: 1
+--- !u!114 &1792953737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792953733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20be6a0630dc55146aecc64d65f3d695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 1792953735}
+  timeBetweenChars: 0.01
+  phrase: "asjfkljasdf\xE7klasjd\xE7flkasdjf\xE7laksd\nasd fsd\nfasdfasdfasdfasdfa\nsdfas\ndfsa\ndf\n\n\ndfasdfasdf:\n-
+    \xE7ljd\xE7asdasd\n- asdasdasdas\n- asda asdasdas\n\n\n...................................................................100%"
 --- !u!1 &1932126204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1347561137563132990, guid: d9f1eab8509cab84c8deac6f16b2db0c, type: 3}
@@ -810,22 +826,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalScale: 1.2
   scaleDuration: 0.1
---- !u!114 &1956640307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145253370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20be6a0630dc55146aecc64d65f3d695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMesh: {fileID: 1792953735}
-  timeBetweenChars: 0.01
-  phrase: "asjfkljasdf\xE7klasjd\xE7flkasdjf\xE7laksd\nasd fsd\nfasdfasdfasdfasdfa\nsdfas\ndfsa\ndf\n\n\ndfasdfasdf:\n-
-    \xE7ljd\xE7asdasd\n- asdasdasdas\n- asda asdasdas\n\n\n...................................................................100%"
 --- !u!1 &2087818553
 GameObject:
   m_ObjectHideFlags: 0
