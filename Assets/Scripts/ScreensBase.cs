@@ -45,7 +45,7 @@ namespace Screens
         }
 
         [Button]
-        protected virtual void Show() {
+        public virtual void Show() {
 
             Debug.Log("Show");
             //ShowComponets();
@@ -56,11 +56,11 @@ namespace Screens
         }
         
         [Button]
-        protected virtual void Hide() {
+        public virtual void Hide() {
 
             Debug.Log("Hide");
-            //ShowComponets(false);
-            HideComponetsScaleAnimation();
+            ShowComponets(false);
+            //HideComponetsScaleAnimation();
             //backgroundUI.enabled = false;
         }
 
