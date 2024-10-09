@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Screens
 {
@@ -26,6 +27,8 @@ namespace Screens
 
         public List<Typper> listOfPhrases;
 
+        public Image backgroundUI;
+
 
         public void StartTypper()
         {
@@ -37,6 +40,7 @@ namespace Screens
 
         private void Start()
         {
+            if (backgroundUI != null) listOfComponents.Insert(0,backgroundUI.transform);
             if (startHided) ShowComponets(false);
         }
 
@@ -47,6 +51,7 @@ namespace Screens
             //ShowComponets();
             ShowComponetsScaleAnimation();
             Invoke(nameof(StartTypper), delayBetweenComponents * listOfComponents.Count);
+            //backgroundUI.enabled = true;
 
         }
         
@@ -56,12 +61,14 @@ namespace Screens
             Debug.Log("Hide");
             //ShowComponets(false);
             HideComponetsScaleAnimation();
+            //backgroundUI.enabled = false;
         }
 
         private void ShowComponets( bool show = true)
         {
             
             listOfComponents.ForEach(t => {t.gameObject.SetActive(show);});
+            //backgroundUI.enabled = show;
         }
         
         private void ShowComponetsScaleAnimation()
